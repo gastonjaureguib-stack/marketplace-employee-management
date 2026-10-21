@@ -1,0 +1,32 @@
+
+# SGE - Sistema de Gestión de Empleados
+
+# Dependencias
+node_modules/
+
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Base de datos SQLite
+*.sqlite
+*.sqlite3
+*.db
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# Compilaciones
+dist/
+build/
+coverage/
+
+# Logs
+*.log
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,71 @@
+
+/* =========================================
+   HEADER - SGE
+========================================= */
+
+.site-header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.site-header__container {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 90px;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* =========================================
+   IDENTIDAD VISUAL
+========================================= */
+
+.site-header__brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.site-header__logo {
+  display: block;
+  width: 110px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .site-header__container {
+    min-height: 75px;
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+  }
+
+  .site-header__logo {
+    width: 85px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header__container {
+    min-height: 65px;
+  }
+
+  .site-header__logo {
+    width: 75px;
+  }
+}

@@ -1,0 +1,222 @@
+
+/* =========================================
+   SGE - FORMULARIO DE EMPLEADOS
+========================================= */
+
+.employee-form {
+  width: 100%;
+  padding: 2rem;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.employee-form__header {
+  margin-bottom: 2rem;
+}
+
+.employee-form__header h2 {
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.employee-form__header p {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* =========================================
+   DISTRIBUCIÓN DE CAMPOS
+========================================= */
+
+.employee-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+/* =========================================
+   CAMPOS DEL FORMULARIO
+========================================= */
+
+.employee-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.employee-form__field label {
+  color: #334155;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.employee-form__field input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.75rem 1rem;
+
+  background-color: #ffffff;
+  color: #1e293b;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+
+  font-size: 0.9rem;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* =========================================
+   ESTADOS DE LOS INPUTS
+========================================= */
+
+.employee-form__field input:hover:not(:disabled) {
+  border-color: #94a3b8;
+}
+
+.employee-form__field input:focus-visible {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.employee-form__field input:disabled {
+  background-color: #f1f5f9;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+.employee-form__field input::placeholder {
+  color: #94a3b8;
+}
+
+.employee-form__field input:invalid:not(:placeholder-shown) {
+  border-color: #dc2626;
+}
+
+/* =========================================
+   BOTONES DE ACCIÓN
+========================================= */
+
+.employee-form__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.employee-form__actions button {
+  min-height: 44px;
+  padding: 0.75rem 1.25rem;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* =========================================
+   BOTÓN CANCELAR
+========================================= */
+
+.employee-form__cancel {
+  background-color: #ffffff;
+  color: #475569;
+  border-color: #cbd5e1 !important;
+}
+
+.employee-form__cancel:hover:not(:disabled) {
+  background-color: #f1f5f9;
+}
+
+/* =========================================
+   BOTÓN GUARDAR
+========================================= */
+
+.employee-form__submit {
+  background-color: #1d4ed8;
+  color: #ffffff;
+}
+
+.employee-form__submit:hover:not(:disabled) {
+  background-color: #1e40af;
+}
+
+/* =========================================
+   ACCESIBILIDAD
+========================================= */
+
+.employee-form__actions button:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.4);
+  outline-offset: 3px;
+}
+
+.employee-form__actions button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 768px) {
+  .employee-form {
+    padding: 1.5rem;
+  }
+
+  .employee-form__grid {
+    gap: 1rem;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - MÓVIL
+========================================= */
+
+@media (max-width: 600px) {
+  .employee-form {
+    padding: 1.25rem;
+  }
+
+  .employee-form__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-form__header {
+    margin-bottom: 1.5rem;
+  }
+
+  .employee-form__actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .employee-form__actions button {
+    width: 100%;
+  }
+}

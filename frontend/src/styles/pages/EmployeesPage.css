@@ -1,0 +1,150 @@
+
+/* =========================================
+   SGE - PÁGINA DE EMPLEADOS
+========================================= */
+
+.employees-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+}
+
+/* =========================================
+   ENCABEZADO DE LA PÁGINA
+========================================= */
+
+.employees-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* =========================================
+   TÍTULO Y DESCRIPCIÓN
+========================================= */
+
+.employees-page__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.employees-page h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #0f172a;
+}
+
+.employees-page > p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+/* =========================================
+   BOTÓN REGISTRAR EMPLEADO
+========================================= */
+
+.employees-page > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+
+  width: auto;
+  min-height: 44px;
+  padding: 0.75rem 1.5rem;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #2563eb;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.employees-page > button:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.employees-page > button:active {
+  transform: translateY(1px);
+}
+
+.employees-page > button:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+.employees-page > button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 768px) {
+  .employees-page {
+    gap: 1.5rem;
+  }
+
+  .employees-page h1 {
+    font-size: 1.5rem;
+  }
+
+  .employees-page > p {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - MÓVIL
+========================================= */
+
+@media (max-width: 480px) {
+  .employees-page__header {
+    align-items: stretch;
+  }
+
+  .employees-page h1 {
+    font-size: 1.35rem;
+  }
+
+  .employees-page > p {
+    font-size: 0.85rem;
+  }
+
+  .employees-page > button {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   ACCESIBILIDAD - MOVIMIENTO REDUCIDO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .employees-page > button {
+    transition: none;
+  }
+}

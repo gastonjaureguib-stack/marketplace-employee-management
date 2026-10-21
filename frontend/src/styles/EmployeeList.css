@@ -1,0 +1,147 @@
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.employee-list {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.employee-list__header {
+  margin-bottom: 1.5rem;
+}
+
+.employee-list__header h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+}
+
+.employee-list__header p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* =========================================
+   TABLA
+========================================= */
+
+.employee-list__table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.employee-list__table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.employee-list__table thead {
+  background-color: #f1f5f9;
+}
+
+.employee-list__table th {
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.employee-list__table td {
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: #334155;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.employee-list__table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.employee-list__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================
+   ESTADO VACÍO
+========================================= */
+
+.employee-list__empty {
+  text-align: center;
+  padding: 2.5rem !important;
+  color: #94a3b8 !important;
+}
+
+/* =========================================
+   BOTONES DE ACCIÓN
+========================================= */
+
+.employee-list__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.employee-list__actions button {
+  padding: 0.45rem 0.8rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.employee-list__edit {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.employee-list__edit:not(:disabled):hover {
+  background-color: #bfdbfe;
+}
+
+.employee-list__delete {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.employee-list__delete:not(:disabled):hover {
+  background-color: #fecaca;
+}
+
+.employee-list__actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .employee-list {
+    padding: 1rem;
+  }
+
+  .employee-list__table th,
+  .employee-list__table td {
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .employee-list__header h2 {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,96 @@
+
+/* =========================================
+   NAVBAR - SGE
+========================================= */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+/* =========================================
+   LISTA DE NAVEGACIÓN
+========================================= */
+
+.navbar__list {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__item {
+  display: flex;
+  align-items: center;
+}
+
+/* =========================================
+   ENLACES
+========================================= */
+
+.navbar__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1rem;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #475569;
+
+  border-radius: 8px;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* =========================================
+   ESTADO ACTIVO
+========================================= */
+
+.navbar__link--active {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+/* =========================================
+   INTERACCIONES
+========================================= */
+
+.navbar a.navbar__link:hover {
+  background-color: #f1f5f9;
+  color: #1e40af;
+}
+
+.navbar a.navbar__link:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .navbar__list {
+    gap: 0.5rem;
+  }
+
+  .navbar__link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar__link {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.8rem;
+  }
+}
